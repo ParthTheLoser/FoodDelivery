@@ -2,7 +2,6 @@ package com.purple.fooddelivery.controller;
 
 import com.purple.fooddelivery.dto.UserProfileDTO;
 import com.purple.fooddelivery.dto.UserUpdateDTO;
-import com.purple.fooddelivery.repository.UserRepository;
 import com.purple.fooddelivery.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

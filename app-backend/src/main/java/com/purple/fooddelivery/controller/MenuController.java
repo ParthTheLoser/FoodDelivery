@@ -1,14 +1,11 @@
 package com.purple.fooddelivery.controller;
 
 import com.purple.fooddelivery.dto.MenuItemDTO;
-import com.purple.fooddelivery.entity.MenuItem;
 import com.purple.fooddelivery.mapper.MenuMapper;
-import com.purple.fooddelivery.repository.MenuItemRepository;
 import com.purple.fooddelivery.service.MenuService;
 import com.purple.fooddelivery.service.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;

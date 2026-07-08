@@ -4,15 +4,11 @@ import com.purple.fooddelivery.dto.AuthResponseDTO;
 import com.purple.fooddelivery.dto.LoginRequestDTO;
 import com.purple.fooddelivery.dto.RegisterRequestDTO;
 import com.purple.fooddelivery.entity.User;
-import com.purple.fooddelivery.entity.Role;
 import com.purple.fooddelivery.repository.UserRepository;
 import com.purple.fooddelivery.security.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.Map;
-import java.util.Optional;
 
 @Service
 public class AuthServiceImpl implements AuthService {

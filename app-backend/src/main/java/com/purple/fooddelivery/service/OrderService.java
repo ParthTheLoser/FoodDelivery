@@ -2,8 +2,6 @@ package com.purple.fooddelivery.service;
 
 import com.purple.fooddelivery.dto.OrderItemDTO;
 import com.purple.fooddelivery.entity.Order;
-import com.purple.fooddelivery.entity.OrderItem;
-
 import java.util.List;
 
 public interface OrderService {

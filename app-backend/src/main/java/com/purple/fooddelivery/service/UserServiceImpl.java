@@ -21,12 +21,6 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public User getAuthenticatedOwner(String email) {
-        return userRepo.findByEmail(email)
-                .orElseThrow(() -> new RuntimeException("User not found"));
-    }
-
-    @Override
     public UserProfileDTO getProfile(Long userId) {
         User user = userRepo.findById(userId).orElseThrow();
         return new UserProfileDTO(user.getName(), user.getEmail(), user.getRole(), user.getPhoneNumber());

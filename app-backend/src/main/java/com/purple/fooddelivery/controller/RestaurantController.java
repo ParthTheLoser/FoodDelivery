@@ -4,7 +4,6 @@ import com.purple.fooddelivery.dto.MenuItemDTO;
 import com.purple.fooddelivery.dto.OrderDTO;
 import com.purple.fooddelivery.dto.RestaurantDTO;
 import com.purple.fooddelivery.entity.MenuItem;
-import com.purple.fooddelivery.entity.Restaurant;
 import com.purple.fooddelivery.mapper.MenuMapper;
 import com.purple.fooddelivery.mapper.OrderMapper;
 import com.purple.fooddelivery.mapper.RestaurantMapper;
@@ -22,7 +21,6 @@ import java.io.IOException;
 import java.security.Principal;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/restaurant")

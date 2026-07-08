@@ -3,12 +3,10 @@ package com.purple.fooddelivery.controller;
 import com.purple.fooddelivery.dto.OrderDTO;
 import com.purple.fooddelivery.dto.OrderItemDTO;
 import com.purple.fooddelivery.entity.Order;
-import com.purple.fooddelivery.entity.OrderItem;
 import com.purple.fooddelivery.entity.User;
 import com.purple.fooddelivery.mapper.OrderMapper;
 import com.purple.fooddelivery.repository.UserRepository;
 import com.purple.fooddelivery.service.OrderService;
-import com.purple.fooddelivery.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,11 +22,12 @@ public class OrderController {
 
     @Autowired
     private OrderService orderService;
-    @Autowired private UserService userService;
+    @Autowired private UserRepository userRepo;
 
     // Helper to get logged-in user securely
     private User getAuthenticatedUser(Principal principal) {
-        return userService.getAuthenticatedOwner(principal.getName());
+        return userRepo.findByEmail(principal.getName())
+                .orElseThrow(() -> new RuntimeException("User not found"));
     }
 
     @PostMapping("/checkout/{restaurantId}")
